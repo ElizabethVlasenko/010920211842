@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import Profile from './Components/Profile/Profile';
+import profileImg from './Assets/Profile.png';
+import Services from './Components/Services/Services';
 import './App.css';
 
 function App() {
+  const services = [
+    {
+      name:'Ручное бронирование',
+      number:11,
+    },
+    {
+      name:'Пакетные туры',
+      number:3,
+    },
+    {
+      name:'Отели',
+      number:1,
+    },
+  ]
+
+  const sum = services.reduce(function(previousValue, item) {
+    return (previousValue+= item.number);
+  }, 0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile  
+        img ={profileImg} 
+        name={'Вероника Ростова'}
+        about={'Менеджер по продажам'}
+        message={'Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны'}
+      />
+      <Services services={services} sum={sum} />
     </div>
   );
 }
