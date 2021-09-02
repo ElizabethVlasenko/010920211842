@@ -1,0 +1,48 @@
+.all-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-reviews__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-reviews__text {
+    margin-right: 9px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;    
+}
+
+.all-reviews__link {
+    color: #005DA1;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.all-reviews__icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.all-reviews__icon {
+    margin: 4px 3px 0 16px;
+}
+
+.all-reviews__like {
+    margin: 3px 4px 2px 0px;
+}
+
+.all-reviews__like-number {
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.all-reviews__comment-number {
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 14px;
+}

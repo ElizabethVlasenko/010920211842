@@ -1,6 +1,8 @@
 import Profile from './Components/Profile/Profile';
 import profileImg from './Assets/Profile.png';
 import Services from './Components/Services/Services';
+import AllReviews from './Components/AllReviews/AllReviews';
+
 import './App.css';
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         message={'Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны'}
       />
       <Services services={services} sum={sum} />
+      <AllReviews/>
     </div>
   );
 }
