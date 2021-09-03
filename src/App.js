@@ -27,14 +27,16 @@ function App() {
   }, 0);
 
   return (
-    <div className="App">
-      <Profile  
-        img ={profileImg} 
-        name={'Вероника Ростова'}
-        about={'Менеджер по продажам'}
-        message={'Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны'}
-      />
-      <Services services={services} sum={sum} />
+    <div className="App Site">
+      <div className="Site-content">
+        <Profile  
+          img ={profileImg} 
+          name={'Вероника Ростова'}
+          about={'Менеджер по продажам'}
+          message={'Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны'}
+        />
+        <Services services={services} sum={sum} />        
+      </div>
       <AllReviews/>
       <CommentArea/>
     </div>
