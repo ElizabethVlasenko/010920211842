@@ -2,6 +2,7 @@ import Profile from './Components/Profile/Profile';
 import profileImg from './Assets/Profile.png';
 import Services from './Components/Services/Services';
 import AllReviews from './Components/AllReviews/AllReviews';
+import CommentArea from './Components/CommentArea/CommentArea';
 
 import './App.css';
 
@@ -35,6 +36,7 @@ function App() {
       />
       <Services services={services} sum={sum} />
       <AllReviews/>
+      <CommentArea/>
     </div>
   );
 }
