@@ -1,0 +1,35 @@
+.comments__box {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+
+#comments__input {
+    min-height: 63px;
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 1px;
+    outline: none;
+    margin: 28px 0 15px;
+}
+
+.comments__button {
+    padding: 15px;
+    margin: 0px 105px 34px;
+    border-radius: 23px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+#comments__button_enabled {
+    background-color: #FDD639;
+}
+
+#comments__button_disabled {
+    color: rgb(124, 124, 124);
+    background-color: #d1d1d1;
+}

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './CommentBox.css';
 
 export default class CommentBox extends Component {
     render() {
@@ -10,15 +11,16 @@ export default class CommentBox extends Component {
         }
         
         return (
-            <div>
-                <div className='comments__box'>
-                    <input 
+            <div className='comments__box'>
+                <div className='container'>
+                    <textarea  
                         onKeyPress={enterCommentLine} 
                         value={commentValue}
                         id='comments__input' 
                         onChange={handleCommentValue}
                         type='text' 
                     />
+                </div>
                     <button 
                         onClick={submitCommentLine} 
                         type='submit' 
@@ -29,7 +31,6 @@ export default class CommentBox extends Component {
                             : 'comments__button_disabled'}
                         disabled={enableCommentButton()}
                     >Написать консультанту</button>
-</div>
             </div>
         )
     }

@@ -1,8 +1,6 @@
-.comments-container {
-margin-top: 9px;
-}
 .comments__list {
     margin-bottom: 27px;
+    margin-top: 9px;
 }
 
 .comment__item {
