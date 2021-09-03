@@ -11,6 +11,10 @@
     line-height: 20px;
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     margin: 0 19px;
 }

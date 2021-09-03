@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Comment.css';
 
 export default class Comment extends Component {
 
@@ -8,9 +9,9 @@ export default class Comment extends Component {
                 className='comment__item' 
                 key={comment.commentId}
                 >
-                    <h4>{comment.user}</h4>
-                    <p>{comment.date}</p>
-                    <div>{comment.text}</div>
+                    <h4 className='item__header'>{comment.user}</h4>
+                    <p className='item__date'>{comment.date}</p>
+                    <div className='item__text'>{comment.text}</div>
                 </li>})
 
         return (

@@ -66,14 +66,16 @@ export default class CommentArea extends Component {
 
     render() {
         return (
-            <div>
-                <Comment comments={ this.state.commentLine}/>
-                <CommentBox
-                    commentValue={this.state.commentValue}
-                    handleCommentValue={this.handleCommentValue}
-                    enterCommentLine={this.enterCommentLine}
-                    submitCommentLine={this.submitCommentLine}
-                />                
+            <div className='comments-container'>
+                <div className='container'>
+                    <Comment comments={ this.state.commentLine}/>
+                    <CommentBox
+                        commentValue={this.state.commentValue}
+                        handleCommentValue={this.handleCommentValue}
+                        enterCommentLine={this.enterCommentLine}
+                        submitCommentLine={this.submitCommentLine}
+                    />
+                </div>                
             </div>
         )
     }
