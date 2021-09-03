@@ -1,26 +1,51 @@
 import React, { Component } from 'react';
 import CommentBox from '../CommentBox/CommentBox';
 import Comment from '../Comment/Comment';
+import * as moment from 'moment';
+import 'moment/locale/ru';
 
-let commentCounter = 1;
+
+let commentCounter = 3;
 
 export default class CommentArea extends Component {
     constructor() {
         super();
         this.state = {
-        commentValue: '',
-        commentLine: [{ commentId:'0', text: '', }],
-          };
+            commentValue: '',
+            commentLine: [{ 
+                commentId:'0', 
+                user: 'Самуил', 
+                date: '13 октября 2011', 
+                text: 'Привет, Верунь! ниче себе ты крутая. фотка класс!!!! ' },
+                {
+                commentId:'1', 
+                user: 'Лилия Семёновна', 
+                date: '14 октября 2011', 
+                text: 'Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?' },
+                {
+                commentId:'2', 
+                user: 'Лилия Семёновна', 
+                date: '14 октября 2011', 
+                text: 'Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?' }      
+            ],
+            
+        };
+    }
+
+    setDateNow = () => {
+        return moment().locale('ru').format('D MMMM YYYY')
     }
 
     setCommentLine = () => {
+        let date = this.setDateNow();
         this.setState({
         commentLine: [
         ...this.state.commentLine,
-        { commentId: commentCounter++, text: this.state.commentValue }],
+        { commentId: commentCounter++, user: 'Мария Ветхова', date: date, text: this.state.commentValue }],
         commentValue: '',
         })
     };
+
 
     handleCommentValue = (e) => {
         this.setState({
@@ -31,13 +56,11 @@ export default class CommentArea extends Component {
     submitCommentLine = (e) => {
         e.preventDefault();
         this.setCommentLine();
-        console.log(this.state);
     };
 
     enterCommentLine = (e) => {
         if (e.charCode===13 && e.ctrlKey) {
         this.setCommentLine();
-        console.log(this.state);
         }
     };
 
