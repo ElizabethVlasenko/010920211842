@@ -72,3 +72,16 @@
         margin: 13px 0 55px 0;
     }
 }
+
+@media (min-width:580px) {
+    .services {
+        margin: 13px 0 55px 0;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .services__number {
+        right: 100px;
+    }
+
+}

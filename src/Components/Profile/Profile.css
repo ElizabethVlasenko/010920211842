@@ -38,3 +38,25 @@
         margin: 5px 0 0;
     }
 }
+
+@media (min-width:580px) {
+    .profile__image {
+        position: static;
+        margin: 15px calc(50% - 62px) 0;
+    }
+    .profile__name {
+        margin: 15px 0 0;
+        text-align: center;
+    }
+    
+    .profile__about { 
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    
+    .profile__message {
+        padding: 5px 20px;
+        margin: 0 0 25px;
+        text-align: center;
+    }
+}
