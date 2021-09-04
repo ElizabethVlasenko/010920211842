@@ -66,3 +66,9 @@
 .services__progress_green {
     background-color: #B1E19B;
 }
+
+@media (max-width:479px) {
+    .services {
+        margin: 13px 0 55px 0;
+    }
+}

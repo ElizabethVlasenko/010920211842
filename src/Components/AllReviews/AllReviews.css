@@ -46,3 +46,9 @@
     font-size: 12px;
     line-height: 14px;
 }
+
+@media (max-width:479px) {
+    .all-reviews__container {
+        flex-direction: column;
+    }
+}
